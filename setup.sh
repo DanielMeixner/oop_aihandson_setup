@@ -39,7 +39,7 @@ do
     # Get the key for the instance
     echo "#######" >> keys.txt
     echo $currentoainame >> keys.txt    
-    echo "OPENAI_API_BASE=https:/$currentoainame.openai.azure.com/" >> keys.txt
+    echo "OPENAI_API_BASE=https://$currentoainame.openai.azure.com/" >> keys.txt
     
     key="az cognitiveservices account keys list --name $currentoainame --resource-group $currentrgname --query key1"
     echo OPENAI_API_KEY=$($key) >> keys.txt
