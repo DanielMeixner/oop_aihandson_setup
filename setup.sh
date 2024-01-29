@@ -34,7 +34,7 @@ do
     az cognitiveservices account deployment create -g $currentrgname -n $currentoainame --deployment-name $completion_model --model-name $completion_model --model-version $completion_model_version --model-format OpenAI --sku-capacity 1 --sku-name "Standard" --capacity=$completion_capacity
     
     # deployment embedding
-    az cognitiveservices account deployment create -g $currentrgname -n $currentoainame --deployment-name embedding --model-name $embedding_model --model-version $embedding_model_version --model-format OpenAI --sku-capacity 1 --sku-name "Standard" --capacity=$embedding_capactiy
+    az cognitiveservices account deployment create -g $currentrgname -n $currentoainame --deployment-name $embedding_model --model-name $embedding_model --model-version $embedding_model_version --model-format OpenAI --sku-capacity 1 --sku-name "Standard" --capacity=$embedding_capactiy
 
 
     # Get the key for the instance
