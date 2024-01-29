@@ -1,6 +1,6 @@
 !/bin/bash
 
-# Usage: ./create_instance.sh <resource_group> <instance_name> <location> <subscription_id>
+# Usage: ./setup.sh <resource_group> <instance_name> <location> <subscription_id> <nr_of_instances> <completion_model> <completion_model_version> <completion capacity>
 
 # Set the input parameters
 resource_group=$1
@@ -8,13 +8,14 @@ instance_name=$2
 location=$3
 subscription_id=$4
 nr_of_instances=$5
+completion_model=$6
+completion_model_version=$7
+completion_capacity=$8
 
 embedding_model="text-embedding-ada-002"
 embedding_model_version="2"
-completion_model="gpt-35-turbo"
-completion_model_version="0613"
+
 sku="s0"
-completion_capacity="10"
 embedding_capactiy="10"
 
 # Run the script in a loop x times
